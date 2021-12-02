@@ -48,8 +48,9 @@ def run_alexa():
         info = wikipedia.summary(person, 1)
         print(info)
         talk(info)
-    elif 'are you single' in command:
-        talk('I am in a relationship with wifi')
+    elif 'date' in command:
+        date = datetime.datetime.now().strftime('%m:%d %Y')
+        talk('Current date is ' + date)
     elif 'joke' in command:
         talk(pyjokes.get_joke())
     #else:
